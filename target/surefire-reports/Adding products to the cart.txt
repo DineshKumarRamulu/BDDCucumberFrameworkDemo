@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: Adding products to the cart
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 14.038 s <<< FAILURE! - in Adding products to the cart
+Adding product to the cart #1(Adding products to the cart)  Time elapsed: 5.483 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Assert cannot be resolved
+
+
+Adding product to the cart #2(Adding products to the cart)  Time elapsed: 3.907 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Assert cannot be resolved
+
+
+Adding product to the cart #3(Adding products to the cart)  Time elapsed: 4.643 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Assert cannot be resolved
+
+
