@@ -1,0 +1,1117 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-05-14T15:50:36.810Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4007000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.getProperty()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2959594200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.launchBrowser()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Login page title",
+        "description": "",
+        "id": "login-page-feature;login-page-title",
+        "after": [
+          {
+            "result": {
+              "duration": 3010300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 267485900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6580133000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on login page",
+            "match": {
+              "location": "stepsdefinitions.LoginPageSteps.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 14555700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user gets title of the page",
+            "match": {
+              "location": "stepsdefinitions.LoginPageSteps.user_gets_title_of_the_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36024700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "page title should be \"Swag Labs\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Swag Labs\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepsdefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-05-14T15:50:46.780Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.getProperty()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1707141700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.launchBrowser()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Login with Correct Credentials",
+        "description": "",
+        "id": "login-page-feature;login-with-correct-credentials",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 221232300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5697539900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user is on login page",
+            "match": {
+              "location": "stepsdefinitions.LoginPageSteps.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 110518900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters userid \"standard_user\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"standard_user\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepsdefinitions.LoginPageSteps.user_enters_userid(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 61669400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enters password \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"secret_sauce\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepsdefinitions.LoginPageSteps.user_enters_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 97177700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "stepsdefinitions.LoginPageSteps.user_clicks_on_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 44148200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user should be landed to the products page",
+            "match": {
+              "location": "stepsdefinitions.LoginPageSteps.user_should_be_landed_to_the_products_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Login page feature",
+    "description": "",
+    "id": "login-page-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/LoginPage.feature",
+    "tags": [
+      {
+        "name": "@login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1190678400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User has already login into the application",
+            "match": {
+              "location": "stepsdefinitions.LoginPageSteps.user_has_already_login_into_the_application(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "standard_user",
+                  "",
+                  "secret_sauce"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-05-14T15:50:54.743Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.getProperty()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1564995400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.launchBrowser()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Adding product to the cart",
+        "description": "",
+        "id": "adding-products-to-the-cart;adding-product-to-the-cart;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 298172200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 42256000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user is on product page",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_is_on_product_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 64369500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user add the \"Sauce Labs Backpack\" to the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sauce Labs Backpack\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_add_the_to_the_cart(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 69603300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user clicks the cart button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_clicks_the_cart_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28769100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "\"Sauce Labs Backpack\" should be available in the cart page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sauce Labs Backpack\"",
+                  "offset": 0
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.should_be_available_in_the_cart_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63157700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user click on the checkout button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_click_on_the_checkout_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 29545300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user should see the Checkout:Your information page",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_should_see_the_checkout_your_information_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 62626700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user provide the firstname \"john\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"john\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_provide_the_firstname(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74061100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user provide the lastname \"walker\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"walker\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_provide_the_lastname(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 73101800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user provide the zipcode \"\u003czipcode\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\u003czipcode\u003e\"",
+                  "offset": 25
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_provide_the_zipcode(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 77698700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user click the continue button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_click_the_continue_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24817600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user should see the checkout:overview page",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_should_see_the_checkout_overview_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 60126100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user click the Finish button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_click_the_finish_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10035763100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user should get the alert message as Thank you for your order!",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_should_get_the_alert_message_as_thank_you_for_your_order()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@product"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1203664200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User has already login into the application",
+            "match": {
+              "location": "stepsdefinitions.LoginPageSteps.user_has_already_login_into_the_application(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "standard_user",
+                  "",
+                  "secret_sauce"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-05-14T15:51:08.542Z",
+        "before": [
+          {
+            "result": {
+              "duration": 997200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.getProperty()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1525633700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.launchBrowser()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "Adding product to the cart",
+        "description": "",
+        "id": "adding-products-to-the-cart;adding-product-to-the-cart;;3",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 269833300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24703900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user is on product page",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_is_on_product_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 97918000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user add the \"Sauce Labs Bike Light\" to the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sauce Labs Bike Light\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_add_the_to_the_cart(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 74556500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user clicks the cart button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_clicks_the_cart_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29305300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "\"Sauce Labs Bike Light\" should be available in the cart page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sauce Labs Bike Light\"",
+                  "offset": 0
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.should_be_available_in_the_cart_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 49336200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user click on the checkout button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_click_on_the_checkout_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24342300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user should see the Checkout:Your information page",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_should_see_the_checkout_your_information_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63445300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user provide the firstname \"peter\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"peter\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_provide_the_firstname(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76228500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user provide the lastname \"zen\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"zen\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_provide_the_lastname(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 82569300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user provide the zipcode \"\u003czipcode\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\u003czipcode\u003e\"",
+                  "offset": 25
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_provide_the_zipcode(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58467600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user click the continue button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_click_the_continue_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 26988600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user should see the checkout:overview page",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_should_see_the_checkout_overview_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 43077000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user click the Finish button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_click_the_finish_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10033888300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user should get the alert message as Thank you for your order!",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_should_get_the_alert_message_as_thank_you_for_your_order()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@product"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1024210600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User has already login into the application",
+            "match": {
+              "location": "stepsdefinitions.LoginPageSteps.user_has_already_login_into_the_application(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "standard_user",
+                  "",
+                  "secret_sauce"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-05-14T15:51:22.254Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.getProperty()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1609926200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.launchBrowser()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Adding product to the cart",
+        "description": "",
+        "id": "adding-products-to-the-cart;adding-product-to-the-cart;;4",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 293049800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "apphooks.ApplicationHooks.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 32651900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user is on product page",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_is_on_product_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 58463800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user add the \"Sauce Labs Fleece Jacket\" to the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sauce Labs Fleece Jacket\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_add_the_to_the_cart(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 113917100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user clicks the cart button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_clicks_the_cart_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32608300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "\"Sauce Labs Fleece Jacket\" should be available in the cart page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sauce Labs Fleece Jacket\"",
+                  "offset": 0
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.should_be_available_in_the_cart_page(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 77750400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user click on the checkout button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_click_on_the_checkout_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24831600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user should see the Checkout:Your information page",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_should_see_the_checkout_your_information_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 62421600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user provide the firstname \"Rock\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Rock\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_provide_the_firstname(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 57798900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user provide the lastname \"star\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"star\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_provide_the_lastname(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 70194900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user provide the zipcode \"\u003czipcode\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\u003czipcode\u003e\"",
+                  "offset": 25
+                }
+              ],
+              "location": "stepsdefinitions.ProductPageSteps.user_provide_the_zipcode(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 62080200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user click the continue button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_click_the_continue_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24364200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user should see the checkout:overview page",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_should_see_the_checkout_overview_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 46782300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user click the Finish button",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_click_the_finish_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10034125900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user should get the alert message as Thank you for your order!",
+            "match": {
+              "location": "stepsdefinitions.ProductPageSteps.user_should_get_the_alert_message_as_thank_you_for_your_order()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@product"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Adding products to the cart",
+    "description": "",
+    "id": "adding-products-to-the-cart",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/ProductPage.feature",
+    "tags": [
+      {
+        "name": "@product",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
