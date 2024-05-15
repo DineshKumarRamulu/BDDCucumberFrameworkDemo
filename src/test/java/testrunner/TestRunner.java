@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue= {"stepsdefinitions","apphooks"},
 		tags = "@smoke or @Regression",
 		//tags = "@product",
-		plugin = {"pretty","json:test-output/cucumber-report.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+		plugin = {"pretty","html:test-output/CucumberHTMLReport.html","json:test-output/cucumber-report.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		monochrome =true
 		)
 
