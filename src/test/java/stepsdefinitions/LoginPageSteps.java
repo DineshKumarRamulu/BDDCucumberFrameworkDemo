@@ -1,18 +1,16 @@
 package stepsdefinitions;
 
-import java.sql.DriverManager;
 import java.util.List;
 import java.util.Map;
 
 import org.testng.Assert;
 
-import com.pages.LoginPage;
-import com.qa.factory.DriverFactory;
-
+import factory.DriverFactory;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.LoginPage;
 
 public class LoginPageSteps {
 	

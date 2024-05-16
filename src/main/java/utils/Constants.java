@@ -1,4 +1,4 @@
-package com.qa.utils;
+package utils;
 
 public class Constants {
 

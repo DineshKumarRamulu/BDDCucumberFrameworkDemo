@@ -6,13 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import com.pages.LoginPage;
-import com.pages.ProductPage;
-import com.qa.factory.DriverFactory;
-
+import factory.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.LoginPage;
+import pages.ProductPage;
 
 public class ProductPageSteps {
 	
