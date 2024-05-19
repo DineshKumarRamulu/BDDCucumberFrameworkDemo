@@ -1,17 +1,22 @@
 package factory;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import utils.CommomUtils;
 
 public class DriverFactory {
 	
 	public static WebDriver driver = null;
 	
-	public WebDriver init_driver(String browser)
+	
+	public WebDriver init_driver(String browser) throws MalformedURLException
 	{
 		if(browser.equals("chrome"))
 		{
@@ -24,6 +29,23 @@ public class DriverFactory {
 		else if(browser.equals("edge"))
 		{
 			driver = new EdgeDriver();
+		}
+		else if(browser.equals("edge"))
+		{
+			driver = new EdgeDriver();
+		}
+		else if(browser.equals("appium"))
+		{
+			UiAutomator2Options options = new UiAutomator2Options()
+					.setPlatformName("Android")
+					.setPlatformVersion("14.0")
+					.setAutomationName("UiAutomator2")
+					.setDeviceName("emulator-5554")
+					.noReset()
+					.withBrowserName("Chrome");
+					
+					driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"),options);
+					//driver.get("https://www.saucedemo.com/");
 		}
 		else
 		{

@@ -2,6 +2,7 @@ package stepsdefinitions;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import org.testng.Assert;
 
@@ -11,17 +12,23 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.LoginPage;
+import utils.ConfigReader;
 
 public class LoginPageSteps {
 	
 LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
 String expectedProductTitle = "Products";
+private ConfigReader configreader;
+Properties prop;
 
 @Given("user is on login page")
 public void user_is_on_login_page() throws InterruptedException {
-	
-    DriverFactory.getDriver().get("https://www.saucedemo.com/");
+	configreader = new ConfigReader();
+	prop = configreader.init_properties();
+	String url = prop.getProperty("url");
+    DriverFactory.getDriver().get(url);
     Thread.sleep(5000);
+    
 }
 
 @When("user gets title of the page")
@@ -61,12 +68,17 @@ public void user_should_be_landed_to_the_products_page() {
 
 @Given("User has already login into the application")
 public void user_has_already_login_into_the_application(DataTable datatable) {
-    List<Map<String,String>>credList = datatable.asMaps();
+	configreader = new ConfigReader();
+	prop = configreader.init_properties();
+	String url = prop.getProperty("url");
+    List<Map<String,String>> credList = datatable.asMaps(String.class, String.class);
     String username = credList.get(0).get("username");
     String password = credList.get(0).get("password");
-    DriverFactory.getDriver().get("https://www.saucedemo.com/");
+    DriverFactory.getDriver().get(url);
     loginpage.doLogin(username, password);
+    }
 }
 
 
-}
+
+

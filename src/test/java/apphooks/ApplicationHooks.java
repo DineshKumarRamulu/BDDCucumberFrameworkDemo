@@ -1,5 +1,6 @@
 package apphooks;
 
+import java.net.MalformedURLException;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
@@ -27,7 +28,7 @@ public class ApplicationHooks {
     }
     
     @Before(order=1)
-    public void launchBrowser()
+    public void launchBrowser() throws MalformedURLException
     {
     	String browsername = prop.getProperty("browser");
     	driverFactory = new DriverFactory();
