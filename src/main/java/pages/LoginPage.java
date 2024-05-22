@@ -17,7 +17,7 @@ public class LoginPage {
 	private WebElement loginButton;
 	
     @FindBy(xpath="//input[@id='user-name']")
-    private WebElement username;
+    private WebElement userName;
     
     @FindBy(xpath="//input[@id='password']")
     private WebElement password;
@@ -42,7 +42,7 @@ public class LoginPage {
 	
 	public void enterusername(String loginusername)
 	{
-		elementUtils.typeTextintoElement(username, loginusername, 10);
+		elementUtils.typeTextintoElement(userName, loginusername, 10);
 	}
 	
 	public void enterPassword(String loginpassword)
@@ -62,7 +62,7 @@ public class LoginPage {
 	
 	public void doLogin(String uid, String pwd)
 	{
-		elementUtils.typeTextintoElement(username, uid, 10);
+		elementUtils.typeTextintoElement(userName, uid, 10);
 		elementUtils.typeTextintoElement(password, pwd, 10);
 		elementUtils.clickOnElement(loginButton, 10);
 	}

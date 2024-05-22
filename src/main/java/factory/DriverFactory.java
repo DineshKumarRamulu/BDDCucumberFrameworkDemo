@@ -45,7 +45,7 @@ public class DriverFactory {
 					.withBrowserName("Chrome");
 					
 					driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"),options);
-					//driver.get("https://www.saucedemo.com/");
+					
 		}
 		else
 		{
