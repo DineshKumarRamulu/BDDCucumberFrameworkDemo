@@ -1,6 +1,10 @@
 C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\pages\LoginPage.java
 C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\pages\ProductPage.java
+C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\testDataBuild\APITestData.java
+C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\utils\APIResources.java
 C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\utils\ElementUtils.java
+C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\pojo\Location.java
 C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\factory\DriverFactory.java
-C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\utils\CommomUtils.java
 C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\utils\ConfigReader.java
+C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\pojo\AddPlace.java
+C:\Users\10716504\Automation\BDDCucumberFrameworkDemo\src\main\java\utils\CommonUtils.java

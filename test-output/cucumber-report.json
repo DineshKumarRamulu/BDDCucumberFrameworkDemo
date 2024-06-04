@@ -1,60 +1,300 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2024-05-22T06:08:43.247Z",
-        "before": [
-          {
-            "result": {
-              "duration": 4521600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.getProperty()"
-            }
-          },
-          {
-            "result": {
-              "duration": 6969470500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.launchBrowser()"
-            }
-          }
-        ],
-        "line": 5,
-        "name": "Login page title",
+        "start_timestamp": "2024-06-04T06:58:00.422Z",
+        "line": 16,
+        "name": "Verify if place is being Successfully added using AddPlaceAPI",
         "description": "",
-        "id": "login-page-feature;login-page-title",
-        "after": [
+        "id": "validating-google-map-place-api-s;verify-if-place-is-being-successfully-added-using-addplaceapi;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
           {
             "result": {
-              "duration": 3170900,
+              "duration": 1970738500,
               "status": "passed"
             },
+            "line": 5,
+            "name": "Load Place Payload with \"peter\" \"English\" \"George Street\"",
             "match": {
-              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
-            }
+              "arguments": [
+                {
+                  "val": "\"peter\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"English\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"George Street\"",
+                  "offset": 42
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.load_place_payload_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 273751200,
+              "duration": 2373582000,
               "status": "passed"
             },
+            "line": 6,
+            "name": "User calls \"addPlaceApi\" with \"POST\" http request",
             "match": {
-              "location": "apphooks.ApplicationHooks.quitBrowser()"
-            }
+              "arguments": [
+                {
+                  "val": "\"addPlaceApi\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22535600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1038251100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 54885500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3999100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User sends the placeid value in the Header",
+            "match": {
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.user_sends_the_placeid_value_in_the_header()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 919116000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User calls \"getPlaceApi\" with \"GET\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"getPlaceApi\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"GET\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19537700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "reponse result name value should match with the request payload \"peter\" value",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"peter\"",
+                  "offset": 64
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.reponse_result_name_value_should_match_with_the_request_payload_value(java.lang.String)"
+            },
+            "keyword": "Then "
           }
         ],
+        "tags": [
+          {
+            "name": "@AddPlaceAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-06-04T06:58:06.997Z",
+        "line": 19,
+        "name": "Verify place is deleted successfully using DeletePlaceApi",
+        "description": "",
+        "id": "validating-google-map-place-api-s;verify-place-is-deleted-successfully-using-deleteplaceapi",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 5869953200,
+              "duration": 14009000,
               "status": "passed"
+            },
+            "line": 20,
+            "name": "Load delete place payload",
+            "match": {
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.load_delete_place_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1243464700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "User calls \"deletePlaceApi\" with \"DELETE\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"deletePlaceApi\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"DELETE\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2002700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 27517200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepsdefinitions.GoogleMapPlaceApiSteps.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlaceAPI"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Google Map Place API\u0027s",
+    "description": "",
+    "id": "validating-google-map-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/GoogleMapPlaceApi.feature",
+    "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-06-04T06:58:08.309Z",
+        "line": 5,
+        "name": "Login page title",
+        "description": "",
+        "id": "login-page-feature;login-page-title",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because the return value of \"factory.DriverFactory.getDriver()\" is null\r\n\tat stepsdefinitions.LoginPageSteps.user_is_on_login_page(LoginPageSteps.java:30)\r\n\tat ✽.user is on login page(file:///C:/Users/10716504/Automation/BDDCucumberFrameworkDemo/src/test/resources/features/LoginPage.feature:6)\r\n",
+              "duration": 48545500,
+              "status": "failed"
             },
             "line": 6,
             "name": "user is on login page",
@@ -65,8 +305,7 @@
           },
           {
             "result": {
-              "duration": 15267200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 7,
             "name": "user gets title of the page",
@@ -77,8 +316,7 @@
           },
           {
             "result": {
-              "duration": 10947600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 8,
             "name": "page title should be \"Swag Labs\"",
@@ -107,57 +345,19 @@
         ]
       },
       {
-        "start_timestamp": "2024-05-22T06:08:56.498Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1013400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.getProperty()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2711225100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.launchBrowser()"
-            }
-          }
-        ],
+        "start_timestamp": "2024-06-04T06:58:08.401Z",
         "line": 11,
         "name": "Login with Correct Credentials",
         "description": "",
         "id": "login-page-feature;login-with-correct-credentials",
-        "after": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 293286200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.quitBrowser()"
-            }
-          }
-        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 6614011200,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because the return value of \"factory.DriverFactory.getDriver()\" is null\r\n\tat stepsdefinitions.LoginPageSteps.user_is_on_login_page(LoginPageSteps.java:30)\r\n\tat ✽.user is on login page(file:///C:/Users/10716504/Automation/BDDCucumberFrameworkDemo/src/test/resources/features/LoginPage.feature:12)\r\n",
+              "duration": 1997400,
+              "status": "failed"
             },
             "line": 12,
             "name": "user is on login page",
@@ -168,8 +368,8 @@
           },
           {
             "result": {
-              "duration": 314000900,
-              "status": "passed"
+              "duration": 2017300,
+              "status": "skipped"
             },
             "line": 13,
             "name": "user enters userid \"standard_user\"",
@@ -186,8 +386,7 @@
           },
           {
             "result": {
-              "duration": 232584800,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 14,
             "name": "user enters password \"secret_sauce\"",
@@ -204,8 +403,8 @@
           },
           {
             "result": {
-              "duration": 173084700,
-              "status": "passed"
+              "duration": 1000100,
+              "status": "skipped"
             },
             "line": 15,
             "name": "user clicks on login button",
@@ -216,8 +415,7 @@
           },
           {
             "result": {
-              "duration": 44940200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 16,
             "name": "user should be landed to the products page",
@@ -265,8 +463,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1911758400,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because the return value of \"factory.DriverFactory.getDriver()\" is null\r\n\tat stepsdefinitions.LoginPageSteps.user_has_already_login_into_the_application(LoginPageSteps.java:77)\r\n\tat ✽.User has already login into the application(file:///C:/Users/10716504/Automation/BDDCucumberFrameworkDemo/src/test/resources/features/ProductPage.feature:5)\r\n",
+              "duration": 7997500,
+              "status": "failed"
             },
             "line": 5,
             "name": "User has already login into the application",
@@ -294,58 +493,18 @@
         ]
       },
       {
-        "start_timestamp": "2024-05-22T06:09:06.913Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1003200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.getProperty()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2326154100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.launchBrowser()"
-            }
-          }
-        ],
+        "start_timestamp": "2024-06-04T06:58:08.476Z",
         "line": 27,
         "name": "Adding product to the cart",
         "description": "",
         "id": "adding-products-to-the-cart;adding-product-to-the-cart;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 1002100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 1956981300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.quitBrowser()"
-            }
-          }
-        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 63093700,
-              "status": "passed"
+              "duration": 999500,
+              "status": "skipped"
             },
             "line": 11,
             "name": "user is on product page",
@@ -356,8 +515,7 @@
           },
           {
             "result": {
-              "duration": 86820100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 12,
             "name": "user add the \"Sauce Labs Backpack\" to the cart",
@@ -374,8 +532,7 @@
           },
           {
             "result": {
-              "duration": 142557900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 13,
             "name": "user clicks the cart button",
@@ -386,8 +543,8 @@
           },
           {
             "result": {
-              "duration": 29846900,
-              "status": "passed"
+              "duration": 1002000,
+              "status": "skipped"
             },
             "line": 14,
             "name": "\"Sauce Labs Backpack\" should be available in the cart page",
@@ -404,8 +561,8 @@
           },
           {
             "result": {
-              "duration": 123625300,
-              "status": "passed"
+              "duration": 998400,
+              "status": "skipped"
             },
             "line": 15,
             "name": "user click on the checkout button",
@@ -416,8 +573,8 @@
           },
           {
             "result": {
-              "duration": 31177400,
-              "status": "passed"
+              "duration": 1002700,
+              "status": "skipped"
             },
             "line": 16,
             "name": "user should see the Checkout:Your information page",
@@ -428,8 +585,8 @@
           },
           {
             "result": {
-              "duration": 237482500,
-              "status": "passed"
+              "duration": 1001400,
+              "status": "skipped"
             },
             "line": 17,
             "name": "user provide the firstname \"john\"",
@@ -446,8 +603,8 @@
           },
           {
             "result": {
-              "duration": 207755800,
-              "status": "passed"
+              "duration": 16994000,
+              "status": "skipped"
             },
             "line": 18,
             "name": "user provide the lastname \"walker\"",
@@ -464,8 +621,8 @@
           },
           {
             "result": {
-              "duration": 228217400,
-              "status": "passed"
+              "duration": 984300,
+              "status": "skipped"
             },
             "line": 19,
             "name": "user provide the zipcode \"\u003czipcode\u003e\"",
@@ -482,8 +639,8 @@
           },
           {
             "result": {
-              "duration": 137932300,
-              "status": "passed"
+              "duration": 997800,
+              "status": "skipped"
             },
             "line": 20,
             "name": "user click the continue button",
@@ -494,8 +651,8 @@
           },
           {
             "result": {
-              "duration": 30149800,
-              "status": "passed"
+              "duration": 997600,
+              "status": "skipped"
             },
             "line": 21,
             "name": "user should see the checkout:overview page",
@@ -506,8 +663,7 @@
           },
           {
             "result": {
-              "duration": 112655400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 22,
             "name": "user click the Finish button",
@@ -518,8 +674,7 @@
           },
           {
             "result": {
-              "duration": 10047309100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 23,
             "name": "user should get the alert message as Thank you for your order!",
@@ -547,8 +702,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1841008800,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because the return value of \"factory.DriverFactory.getDriver()\" is null\r\n\tat stepsdefinitions.LoginPageSteps.user_has_already_login_into_the_application(LoginPageSteps.java:77)\r\n\tat ✽.User has already login into the application(file:///C:/Users/10716504/Automation/BDDCucumberFrameworkDemo/src/test/resources/features/ProductPage.feature:5)\r\n",
+              "duration": 3029000,
+              "status": "failed"
             },
             "line": 5,
             "name": "User has already login into the application",
@@ -576,57 +732,17 @@
         ]
       },
       {
-        "start_timestamp": "2024-05-22T06:09:24.630Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1010500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.getProperty()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2021136500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.launchBrowser()"
-            }
-          }
-        ],
+        "start_timestamp": "2024-06-04T06:58:08.558Z",
         "line": 28,
         "name": "Adding product to the cart",
         "description": "",
         "id": "adding-products-to-the-cart;adding-product-to-the-cart;;3",
-        "after": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 320860400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.quitBrowser()"
-            }
-          }
-        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 67436300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 11,
             "name": "user is on product page",
@@ -637,8 +753,8 @@
           },
           {
             "result": {
-              "duration": 91405400,
-              "status": "passed"
+              "duration": 2041300,
+              "status": "skipped"
             },
             "line": 12,
             "name": "user add the \"Sauce Labs Bike Light\" to the cart",
@@ -655,8 +771,8 @@
           },
           {
             "result": {
-              "duration": 153980000,
-              "status": "passed"
+              "duration": 1002100,
+              "status": "skipped"
             },
             "line": 13,
             "name": "user clicks the cart button",
@@ -667,8 +783,7 @@
           },
           {
             "result": {
-              "duration": 34368800,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 14,
             "name": "\"Sauce Labs Bike Light\" should be available in the cart page",
@@ -685,8 +800,7 @@
           },
           {
             "result": {
-              "duration": 155575100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 15,
             "name": "user click on the checkout button",
@@ -697,8 +811,8 @@
           },
           {
             "result": {
-              "duration": 46983500,
-              "status": "passed"
+              "duration": 1018500,
+              "status": "skipped"
             },
             "line": 16,
             "name": "user should see the Checkout:Your information page",
@@ -709,8 +823,8 @@
           },
           {
             "result": {
-              "duration": 292794400,
-              "status": "passed"
+              "duration": 1992200,
+              "status": "skipped"
             },
             "line": 17,
             "name": "user provide the firstname \"peter\"",
@@ -727,8 +841,8 @@
           },
           {
             "result": {
-              "duration": 279459400,
-              "status": "passed"
+              "duration": 986100,
+              "status": "skipped"
             },
             "line": 18,
             "name": "user provide the lastname \"zen\"",
@@ -745,8 +859,8 @@
           },
           {
             "result": {
-              "duration": 287415600,
-              "status": "passed"
+              "duration": 1001000,
+              "status": "skipped"
             },
             "line": 19,
             "name": "user provide the zipcode \"\u003czipcode\u003e\"",
@@ -763,8 +877,8 @@
           },
           {
             "result": {
-              "duration": 161475300,
-              "status": "passed"
+              "duration": 1001800,
+              "status": "skipped"
             },
             "line": 20,
             "name": "user click the continue button",
@@ -775,8 +889,8 @@
           },
           {
             "result": {
-              "duration": 49581500,
-              "status": "passed"
+              "duration": 998900,
+              "status": "skipped"
             },
             "line": 21,
             "name": "user should see the checkout:overview page",
@@ -787,8 +901,7 @@
           },
           {
             "result": {
-              "duration": 167255700,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 22,
             "name": "user click the Finish button",
@@ -799,8 +912,7 @@
           },
           {
             "result": {
-              "duration": 10057091300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 23,
             "name": "user should get the alert message as Thank you for your order!",
@@ -828,8 +940,9 @@
         "steps": [
           {
             "result": {
-              "duration": 2767664400,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because the return value of \"factory.DriverFactory.getDriver()\" is null\r\n\tat stepsdefinitions.LoginPageSteps.user_has_already_login_into_the_application(LoginPageSteps.java:77)\r\n\tat ✽.User has already login into the application(file:///C:/Users/10716504/Automation/BDDCucumberFrameworkDemo/src/test/resources/features/ProductPage.feature:5)\r\n",
+              "duration": 2002400,
+              "status": "failed"
             },
             "line": 5,
             "name": "User has already login into the application",
@@ -857,58 +970,17 @@
         ]
       },
       {
-        "start_timestamp": "2024-05-22T06:09:40.681Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1014900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.getProperty()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2774123200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.launchBrowser()"
-            }
-          }
-        ],
+        "start_timestamp": "2024-06-04T06:58:08.602Z",
         "line": 29,
         "name": "Adding product to the cart",
         "description": "",
         "id": "adding-products-to-the-cart;adding-product-to-the-cart;;4",
-        "after": [
-          {
-            "result": {
-              "duration": 1168000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.teardown(io.cucumber.java.Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 549349500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "apphooks.ApplicationHooks.quitBrowser()"
-            }
-          }
-        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 71431100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 11,
             "name": "user is on product page",
@@ -919,8 +991,8 @@
           },
           {
             "result": {
-              "duration": 102560400,
-              "status": "passed"
+              "duration": 2001300,
+              "status": "skipped"
             },
             "line": 12,
             "name": "user add the \"Sauce Labs Fleece Jacket\" to the cart",
@@ -937,8 +1009,8 @@
           },
           {
             "result": {
-              "duration": 218045700,
-              "status": "passed"
+              "duration": 1006000,
+              "status": "skipped"
             },
             "line": 13,
             "name": "user clicks the cart button",
@@ -949,8 +1021,8 @@
           },
           {
             "result": {
-              "duration": 57890900,
-              "status": "passed"
+              "duration": 998100,
+              "status": "skipped"
             },
             "line": 14,
             "name": "\"Sauce Labs Fleece Jacket\" should be available in the cart page",
@@ -967,8 +1039,8 @@
           },
           {
             "result": {
-              "duration": 194167400,
-              "status": "passed"
+              "duration": 985400,
+              "status": "skipped"
             },
             "line": 15,
             "name": "user click on the checkout button",
@@ -979,8 +1051,8 @@
           },
           {
             "result": {
-              "duration": 52219100,
-              "status": "passed"
+              "duration": 998600,
+              "status": "skipped"
             },
             "line": 16,
             "name": "user should see the Checkout:Your information page",
@@ -991,8 +1063,8 @@
           },
           {
             "result": {
-              "duration": 319580800,
-              "status": "passed"
+              "duration": 1006800,
+              "status": "skipped"
             },
             "line": 17,
             "name": "user provide the firstname \"Rock\"",
@@ -1009,8 +1081,8 @@
           },
           {
             "result": {
-              "duration": 237291800,
-              "status": "passed"
+              "duration": 998600,
+              "status": "skipped"
             },
             "line": 18,
             "name": "user provide the lastname \"star\"",
@@ -1027,8 +1099,8 @@
           },
           {
             "result": {
-              "duration": 318707600,
-              "status": "passed"
+              "duration": 1002300,
+              "status": "skipped"
             },
             "line": 19,
             "name": "user provide the zipcode \"\u003czipcode\u003e\"",
@@ -1045,8 +1117,8 @@
           },
           {
             "result": {
-              "duration": 192184800,
-              "status": "passed"
+              "duration": 995700,
+              "status": "skipped"
             },
             "line": 20,
             "name": "user click the continue button",
@@ -1057,8 +1129,7 @@
           },
           {
             "result": {
-              "duration": 44199000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "user should see the checkout:overview page",
@@ -1069,8 +1140,7 @@
           },
           {
             "result": {
-              "duration": 134955600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 22,
             "name": "user click the Finish button",
@@ -1081,8 +1151,7 @@
           },
           {
             "result": {
-              "duration": 10055930400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 23,
             "name": "user should get the alert message as Thank you for your order!",

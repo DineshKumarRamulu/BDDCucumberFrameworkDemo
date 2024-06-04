@@ -14,3 +14,5 @@ Feature: Login page feature
     And user enters password "secret_sauce"
     When user clicks on login button
     Then user should be landed to the products page
+
+ 

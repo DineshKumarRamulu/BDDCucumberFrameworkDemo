@@ -20,6 +20,7 @@ LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
 String expectedProductTitle = "Products";
 private ConfigReader configreader;
 Properties prop;
+String title;
 
 @Given("user is on login page")
 public void user_is_on_login_page() throws InterruptedException {
@@ -33,13 +34,12 @@ public void user_is_on_login_page() throws InterruptedException {
 
 @When("user gets title of the page")
 public void user_gets_title_of_the_page() {
-   String title = loginpage.getLoginpageTitle();
+   title = loginpage.getLoginpageTitle();
    
 }
 
 @Then("page title should be {string}")
 public void page_title_should_be(String ExpectedTitle) {
-	String title = loginpage.getLoginpageTitle();
 	Assert.assertEquals(title, ExpectedTitle);
 }
 
