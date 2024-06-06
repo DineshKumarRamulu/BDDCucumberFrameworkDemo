@@ -11,8 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features= {"src/test/resources/features"},
 		glue= {"stepsdefinitions","apphooks"},
-		//tags = "@smoke or @Regression",
-		tags = "@AddPlaceAPI or @DeletePlaceAPI",
+		//tags = "@AddPlaceAPI or @DeletePlaceAPI",
+		tags = "@smoke or @product or @AddPlaceAPI or @DeletePlaceAPI ",
+		//tags="@NativeApp",
 		dryRun = false,
 		plugin = {"pretty","html:test-output/CucumberHTMLReport.html","json:test-output/cucumber-report.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		monochrome =true

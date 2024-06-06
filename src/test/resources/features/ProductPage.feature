@@ -6,7 +6,7 @@ Feature: Adding products to the cart
       | username      |  | password     |
       | standard_user |  | secret_sauce |
 
-  @Regression
+  @Regression @AddTOCart
   Scenario Outline: Adding product to the cart
     Given user is on product page
     When user add the "<product>" to the cart
@@ -16,14 +16,14 @@ Feature: Adding products to the cart
     Then user should see the Checkout:Your information page
     And user provide the firstname "<Firstname>"
     And user provide the lastname "<Lastname>"
-    And user provide the zipcode "<zipcode>"
+    And user provide the zipcode "<Zipcode>"
     When user click the continue button
     Then user should see the checkout:overview page
     When user click the Finish button
     Then user should get the alert message as Thank you for your order!
 
     Examples: 
-      | product                  |  | Firstname |  | Lastname |  | Zipcode |
-      | Sauce Labs Backpack      |  | john      |  | walker   |  |  600040 |
-      | Sauce Labs Bike Light    |  | peter     |  | zen      |  |  600045 |
-      | Sauce Labs Fleece Jacket |  | Rock      |  | star     |  |  600048 |
+      | product                  | Firstname | Lastname | Zipcode |
+      | Sauce Labs Backpack      | john      | walker   |  600040 |
+      | Sauce Labs Bike Light    | peter     | zen      |  600045 |
+      | Sauce Labs Fleece Jacket | Rock      | star     |  600048 |

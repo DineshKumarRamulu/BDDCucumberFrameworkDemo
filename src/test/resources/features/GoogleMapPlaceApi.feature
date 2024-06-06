@@ -1,6 +1,6 @@
 Feature: Validating Google Map Place API's
 
-  @AddPlaceAPI
+  @AddPlaceAPI 
   Scenario Outline: Verify if place is being Successfully added using AddPlaceAPI
     Given Load Place Payload with "<name>" "<language>" "<address>"
     When User calls "addPlaceApi" with "POST" http request
@@ -21,3 +21,5 @@ Feature: Validating Google Map Place API's
     When User calls "deletePlaceApi" with "DELETE" http request
     Then the API call got success with status code 200
     And "status" in response body is "OK"
+    
+    

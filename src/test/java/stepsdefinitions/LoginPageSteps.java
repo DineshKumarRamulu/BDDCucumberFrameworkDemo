@@ -15,7 +15,8 @@ import pages.LoginPage;
 import utils.ConfigReader;
 
 public class LoginPageSteps {
-	
+
+
 LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
 String expectedProductTitle = "Products";
 private ConfigReader configreader;
@@ -27,6 +28,7 @@ public void user_is_on_login_page() throws InterruptedException {
 	configreader = new ConfigReader();
 	prop = configreader.init_properties();
 	String url = prop.getProperty("url");
+	
     DriverFactory.getDriver().get(url);
     Thread.sleep(5000);
     

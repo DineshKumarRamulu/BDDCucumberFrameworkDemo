@@ -20,14 +20,14 @@ public class ApplicationHooks {
 	private ConfigReader configReader;
 	Properties prop;
 	
-    @Before(order=0,value="not@GoogleMapPlaceApi")
+    @Before(order=0)
     public void getProperty()
     {
     	configReader = new ConfigReader();
     	prop = configReader.init_properties();
     }
-    
-    @Before(order=1,value="not@GoogleMapPlaceApi")
+
+    @Before(order=1,value="@smoke or @Regression")
     public void launchBrowser() throws MalformedURLException
     {
     	String browsername = prop.getProperty("browser");
@@ -35,13 +35,13 @@ public class ApplicationHooks {
     	driver = driverFactory.init_driver(browsername);
     }
 
-    @After(order=0,value="not@GoogleMapPlaceApi")
+    @After(order=0,value="@smoke or @Regression")
     public void quitBrowser()
     {
     	driver.quit();
     }
     
-    @After(order=1,value="not@GoogleMapPlaceApi")
+    @After(order=1,value="@smoke or @Regression")
     public void teardown(Scenario scenario)
     {
     	if(scenario.isFailed())
